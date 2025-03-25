@@ -42,13 +42,13 @@
             Наши услуги
         </h1>
 
-        <div class="uslugi">
-            <div class="uslugi__card card1">
+        <div class="uslugi" onclick="alert('from div2')">
+            <div class="uslugi__card card1" onclick="alert('from div')">
                 <img src="images/stroika.webp" class="card__image" alt="">
                 <p class="description uslugi__description text">
                     Наши услуги пользуются высоким спросом на рынке
                 </p>
-                <p class="text text_bold">
+                <p class="text text_bold" id="p_primary" onclick="alert('from p')">
                     5 000 р
                 </p>
             </div>
@@ -107,7 +107,7 @@
                     <option value="female" class="form__option text text_bold">Женский</option>
                 </select>
                 
-                <button type="submit" class="form__button" id="btn_form">Отправить форму</button>
+                <button onclick="alert(this.innerHTML)" type="submit" class="form__button" id="btn_form">Отправить форму</button>
             </form>
         </div>
 

@@ -120,6 +120,20 @@ if (welcomeText) {
 
 let elem = document.getElementById('hello');
 elem.hidden = false;
+// elem.onclick = function() {
+//     alert('Клик1');
+// }
+// elem.onclick = function() {
+//     alert('Клик2');
+// }
+
+elem.addEventListener("click", () => alert('Клик1'))
+elem.addEventListener("click", () => alert('Клик2'))
+
+document.addEventListener("DOMContentLoaded", function() {
+    alert("HTML is ready")
+})
+
 // elem.textContent = "Приветствие";
 
 let nav = document.querySelectorAll('nav');
@@ -145,3 +159,15 @@ for (let navElem of nav) {
 
 let btn_form = document.getElementById('btn_form')
 btn_form.type = "input";
+
+let p_primary = document.getElementById('p_primary');
+p_primary.addEventListener("click", function(event) {
+    alert(event.target)
+    event.stopPropagation();
+})
+// alert(p_primary.target)
+
+
+
+
+// рассказать про погружение
