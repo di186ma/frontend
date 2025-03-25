@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css" type="text/css">
+    <link rel="stylesheet" href="styles/header.css" type="text/css">
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
+    <link rel="stylesheet" href="styles/footer.css" type="text/css">
+    <link rel="stylesheet" href="styles/form.css" type="text/css">
+    <title>Stroika</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a href="" class="text">
+                Знакомство
+            </a>
+            <a href="" class="text">
+                Наши услуги
+            </a>
+            <a href="" class="text">
+                Заказать услугу
+            </a>
+        </nav>
+    </header>
+    <main class="main">
+        <h1 class="text-headers text main-title"  id="hello">
+            Знакомство
+        </h1>
+
+        <div class="welcome">
+            <div class="welcome__text text_size_big text">
+                Привет! Меня зовут Виктор, и я здесь, чтобы помочь вам 😊. Кстати, в настоящее время у нас есть специальное предложение на ароматизированные свечи только в течение ограниченного времени. Дайте мне знать, если хотите узнать больше!
+            </div>
+            <div class="welcome__photo">
+                <img src="images/stroika.webp" class="welcome__image-stroika" class="" alt="">
+            </div>
+        </div>
+
+        <h1 class="text-headers text main-title">
+            Наши услуги
+        </h1>
+
+        <div class="uslugi">
+            <div class="uslugi__card card1">
+                <img src="images/stroika.webp" class="card__image" alt="">
+                <p class="description uslugi__description text">
+                    Наши услуги пользуются высоким спросом на рынке
+                </p>
+                <p class="text text_bold">
+                    5 000 р
+                </p>
+            </div>
+
+            <div class="uslugi__card card2">
+                <img src="images/stroika.webp" class="card__image" alt="">
+                <p class="description uslugi__description text">
+                    Наши услуги пользуются высоким спросом на рынке
+                </p>
+                <p class="text text_bold">
+                    5 000 р
+                </p>
+            </div>
+
+            <div class="uslugi__card card3">
+                <img src="images/stroika.webp" class="card__image" alt="">
+                <p class="description uslugi__description text">
+                    Наши услуги пользуются высоким спросом на рынке
+                </p>
+                <p class="text text_bold">
+                    5 000 р
+                </p>
+            </div>
+
+            <div class="uslugi__card card4">
+                <img src="images/stroika.webp" class="card__image" alt="">
+                <p class="description uslugi__description text">
+                    Наши услуги пользуются высоким спросом на рынке
+                </p>
+                <p class="text text_bold">
+                    5 000 р
+                </p>
+            </div>
+        </div>
+
+        <div class="registration">
+            <h1 class="text-headers text main-title">Зарегестрируйтесь на нашем сайте!</h2>
+            <form action="/submit" method="POST" class="form">
+                <label for="email" class="text text_bold">
+                    Email:
+                </label>
+                <input type="email" placeholder="Введите email" class="form__input text text_bold">
+        
+                <label for="tel" class="text text_bold">Укажите Ваш номер телефона</label>
+                <input type="tel" placeholder="+799999" class="form__input text text_bold">
+        
+                <label for="password" class="text text_bold">Пароль:</label>
+                <input type="password" placeholder="Введите пароль" class="form__input text text_bold">
+        
+                <label for="message" class="text text_bold">Ваши пожелания к заказу:</label>
+                <textarea name="message" id="" rows="10" placeholder="Ваши пожелания" class="form__textarea text text_bold"></textarea>
+        
+                <label for="gender" class="text text_bold">Укажите ваш пол</label>
+                <select name="gender" id="" class="form__select">
+                    <option value="male" class="form__option text text_bold">Мужской</option>
+                    <option value="female" class="form__option text text_bold">Женский</option>
+                </select>
+                
+                <button type="submit" class="form__button" id="btn_form">Отправить форму</button>
+            </form>
+        </div>
+
+        <div class="action">
+            <h1 class="action__headers text-headers text main-title">
+                Заказать услугу
+            </h1>
+            <p class="action__description description text">
+                Заказав услугу у нас, Вы сможете быть уверены в качестве
+            </p>
+            <div class="void-btn">
+                <button class="btn action__btn text text_size_normal">
+                    Заказать сейчас
+                </button>
+            </div>
+            
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="void-footer">
+            <div class="footer__column">
+                <h1 class="footer__text text">
+                    Колонка 1
+                </h1>
+                <p class="description footer__description text">
+                    Пункт меню 1
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 2
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 3
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 4
+                </p>
+            </div>
+            <div class="footer__column">
+                <h1 class="footer__text text">
+                    Колонка 2
+                </h1>
+                <p class="description footer__description text">
+                    Пункт меню 1
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 2
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 3
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 4
+                </p>
+            </div>
+            <div class="footer__column">
+                <h1 class="footer__text text">
+                    Колонка 3
+                </h1>
+                <p class="description footer__description text">
+                    Пункт меню 1
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 2
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 3
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 4
+                </p>
+            </div>
+            <div class="footer__column">
+                <h1 class="footer__text text">
+                    Колонка 4
+                </h1>
+                <p class="description footer__description text">
+                    Пункт меню 1
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 2
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 3
+                </p>
+                <p class="description footer__description text">
+                    Пункт меню 4
+                </p>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- <script>
+        alert("Hello, world!");
+    </script> -->
+    <script src="scriptClass.js"></script>
+</body>
+</html>
