@@ -157,17 +157,82 @@ for (let navElem of nav) {
 // console.log(document.body.innerHTML)
 // console.log(document.body.outerHTML)
 
-let btn_form = document.getElementById('btn_form')
-btn_form.type = "input";
+// let btn_form = document.getElementById('btn_form')
+// btn_form.type = "input";
 
-let p_primary = document.getElementById('p_primary');
-p_primary.addEventListener("click", function(event) {
-    alert(event.target)
-    event.stopPropagation();
-})
+// let p_primary = document.getElementById('p_primary');
+// p_primary.addEventListener("click", function(event) {
+//     alert(event.target)
+//     event.stopPropagation();
+// })
 // alert(p_primary.target)
 
 
 
 
 // рассказать про погружение
+let uslugi = document.getElementById('uslugi')
+let uslugi__card = document.getElementById('uslugi__card')
+let p_primary = document.getElementById('p_primary');
+
+uslugi.addEventListener('click', () => {console.log("Вызов uslugi")}, true)
+uslugi__card.addEventListener('click', () => {console.log("Вызов uslugi__card")}, true)
+p_primary.addEventListener('click', () => {console.log("Вызов p_primary")}, true)
+
+
+
+
+let form__page = document.getElementById('form__page');
+let btn_form = document.getElementById('btn_form')
+let summator = document.getElementById('summator')
+
+// form__page.addEventListener('mouseover', () => {summator.textContent += 'mouseover (form__page)\n'})
+// form__page.addEventListener('mouseout', () => {summator.textContent += 'mouseout (form__page)\n'})
+
+// btn_form.addEventListener('mouseover', () => {summator.textContent += 'mouseover (btn_form)\n'})
+// btn_form.addEventListener('mouseout', () => {summator.textContent += 'mouseout (btn_form)\n'})
+
+
+form__page.addEventListener('mouseenter', () => {summator.textContent += 'mouseenter (form__page)\n'})
+form__page.addEventListener('mouseleave', () => {summator.textContent += 'mouseleave (form__page)\n'})
+
+btn_form.addEventListener('mouseenter', () => {summator.textContent += 'mouseenter (btn_form)\n'})
+btn_form.addEventListener('mouseleave', () => {summator.textContent += 'mouseleave (btn_form)\n'})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let draggable = document.querySelectorAll('.draggable');
+    let kran = document.getElementById('kran')
+    let plita = document.getElementById('plita')
+    let notification = document.getElementById('notification')
+
+
+    let isDrag = false;
+    let currentElement = null;
+
+    function checkCollision(elem1, elem2) {
+        let rect1 = elem1.getBoundingClientRect();
+        let rect2 = elem2.getBoundingClientRect();
+
+        return !(rect1.right < rect2.left || rect1.left > rect2.right ||
+            rect1.bottom < rect2.top || rect1.top > rect2.bottom);
+    }
+
+    [kran, plita].forEach(elem => {
+        elem.addEventListener('dragstart', (e) => {
+            currentElement = e.target;
+            isDrag = true;
+
+            e.target.classList.add('dragging')
+        });
+
+        elem.addEventListener('dragend', () => {
+            isDrag = false;
+            currentElement.classList.remove('dragging');
+
+            notification.style.display = 'none';
+        });
+
+    })
+})
+

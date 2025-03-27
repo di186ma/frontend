@@ -38,12 +38,27 @@
             </div>
         </div>
 
+        <div class="notification" id="notification">
+            <h1>
+                Начинаем стройку!
+            </h1>
+        </div>
+        <div class="interactive" style="background-color: white; width: 100%;">
+            <div class="draggable" id="kran" draggable="true">
+                <img src="images/kran.jpeg" alt="">
+            </div>
+            <div class="draggable" id="plita" draggable="true">
+                <img src="images/plita.jpeg" alt="">
+            </div>
+
+        </div>
+
         <h1 class="text-headers text main-title">
             Наши услуги
         </h1>
 
-        <div class="uslugi" onclick="alert('from div2')">
-            <div class="uslugi__card card1" onclick="alert('from div')">
+        <div class="uslugi" id="uslugi" onclick="alert('from div2')">
+            <div class="uslugi__card card1" id="uslugi__card" onclick="alert('from div')">
                 <img src="images/stroika.webp" class="card__image" alt="">
                 <p class="description uslugi__description text">
                     Наши услуги пользуются высоким спросом на рынке
@@ -86,8 +101,8 @@
 
         <div class="registration">
             <h1 class="text-headers text main-title">Зарегестрируйтесь на нашем сайте!</h2>
-            <form action="/submit" method="POST" class="form">
-                <label for="email" class="text text_bold">
+            <form action="/submit" method="POST" class="form" id="form__page">
+                <!-- <label for="email" class="text text_bold">
                     Email:
                 </label>
                 <input type="email" placeholder="Введите email" class="form__input text text_bold">
@@ -106,8 +121,9 @@
                     <option value="male" class="form__option text text_bold">Мужской</option>
                     <option value="female" class="form__option text text_bold">Женский</option>
                 </select>
-                
+                 -->
                 <button onclick="alert(this.innerHTML)" type="submit" class="form__button" id="btn_form">Отправить форму</button>
+                <p id="summator"></p>
             </form>
         </div>
 
